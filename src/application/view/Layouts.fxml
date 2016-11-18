@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxWidth="640.0" prefHeight="480.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <BorderPane layoutY="28.0" prefHeight="400.0" prefWidth="500.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutY="28.0" prefHeight="400.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
             <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
@@ -32,7 +32,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../../images/CChannel.png" />
                      </image>
@@ -51,47 +51,53 @@
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
                   </Label>
                   <Label text="A great project!" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="43.0" top="50.0" />
                      </GridPane.margin>
+                     <padding>
+                        <Insets left="23.0" />
+                     </padding>
                   </Label>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <HBox layoutX="51.0" layoutY="103.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#handleSend" styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" text="DIE" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#handleClose" styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" text="LIVE" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </center>
          <bottom>
-            <AnchorPane BorderPane.alignment="CENTER">
+            <AnchorPane styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox layoutX="486.0" prefHeight="40.0" prefWidth="84.0">
-                     <children>
-                        <Button mnemonicParsing="false" styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" text="DIE" textFill="WHITE">
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                        </Button>
-                        <Button mnemonicParsing="false" styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" text="LIVE" textFill="WHITE">
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                        </Button>
-                     </children>
-                  </HBox>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="2.0">
+                     <image>
+                        <Image url="@../../images/ccheart.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </bottom>
       </BorderPane>
-      <AnchorPane layoutY="444.0" styleClass="GoldenRod" stylesheets="@../../resources/fonts/micss.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="444.0">
-         <children>
-            <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="2.0">
-               <image>
-                  <Image url="@../../images/ccheart.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
    </children>
 </AnchorPane>

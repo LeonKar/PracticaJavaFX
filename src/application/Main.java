@@ -2,13 +2,12 @@ package application;
 
 import java.io.IOException;
 
-import application.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Font;
+//import javafx.scene.text.Font;
 
 
 public class Main extends Application {
@@ -54,22 +53,19 @@ public class Main extends Application {
 			// Show the scene containing the root layout.
 			Scene scene = new Scene(rootLayout, 640, 480);
 			scene.getStylesheets().add(
-					getClass().getResource("micss.css").toExternalForm());
+					getClass().getResource("resources.fonts/micss.css").toExternalForm());
 	
 			//			adding fonts
-			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
+			//scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
             //Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
             
 			primaryStage.setScene(scene);
 			
-			Controller controller = loader.getController();
-            controller.setMain(this);
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
 	/**
 	 * @param args launching 
 	 */
